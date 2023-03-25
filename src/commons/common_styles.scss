@@ -1,0 +1,191 @@
+//nav_section
+.nav_wrapper {
+  min-height: 10vh;
+  z-index: 10;
+
+  .title {
+    font-weight: 600;
+  }
+}
+
+.date_picker_wrapper {
+  font-size: small;
+  p {
+    transform: translateY(8px);
+    margin-right: 4px;
+  }
+
+  input {
+    font-size: small;
+    transform: translateY(5px);
+    cursor: pointer;
+  }
+}
+
+.table_wrapper {
+  padding: 1rem;
+
+  table {
+    font-size: small !important;
+    border: 1px solid darkgrey;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+  }
+}
+
+.make_green {
+  color: green !important;
+  border: none !important;
+  border: 2px solid green !important;
+}
+.make_yellow {
+  color: goldenrod !important;
+  border: none !important;
+  border: 2px solid goldenrod !important;
+}
+.fill_green {
+  color: white !important;
+  border: none !important;
+  background-color: green !important;
+}
+.fill_red {
+  color: white !important;
+  border: none !important;
+  background-color: rgb(197, 42, 42) !important;
+}
+
+.status_box {
+  font-size: small;
+  border: 2px solid grey;
+  text-align: center;
+  padding: 0.2rem;
+  font-weight: 600;
+  max-width: 8rem;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+.make_bold {
+  font-weight: 600;
+}
+
+//order type filter section
+
+.order_type_container {
+  .container {
+    margin: 10px;
+    align-items: flex-start;
+    padding: 10px 20px;
+    box-shadow: var(--box-shadow);
+    background-color: white;
+    border-radius: 4px;
+  }
+
+  .heading {
+    margin: 0;
+    font-size: small;
+    margin: 10px 0px;
+    font-weight: 600;
+  }
+
+  .genre_container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .genre {
+    min-width: 90px;
+    display: flex;
+    align-items: center;
+    margin: 2px 0;
+    text-transform: capitalize;
+    font-size: small;
+    font-weight: 600;
+  }
+
+  .genre_label {
+    margin: 0;
+    margin-left: 5px;
+  }
+
+  input[type="checkbox"] {
+    cursor: pointer;
+  }
+}
+
+//pagination component
+.pagination_wrapper {
+  .container {
+    /* position: absolute;
+  bottom: 0;
+  left: 0; */
+    /* width: calc(100% - 20px); */
+    margin: 0 10px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+  }
+
+  .page_btn {
+    outline: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    background-color: white;
+  }
+
+  .active {
+    background-color: var(--blue);
+    color: white;
+  }
+}
+
+//page select component
+.page_select_wrapper {
+  .container {
+    margin: 10px;
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .genre_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .genre {
+    min-width: 90px;
+    display: flex;
+    align-items: center;
+    margin: 2px 0;
+    text-transform: uppercase;
+    font-size: small;
+  }
+
+  .genre_label {
+    margin: 0;
+    margin-left: 5px;
+  }
+
+  input[type="checkbox"] {
+    cursor: pointer;
+  }
+
+  select {
+    margin-left: 5px;
+  }
+}
