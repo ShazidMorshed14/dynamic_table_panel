@@ -2,7 +2,7 @@ Installation procedure of the project on local
 -----------------------------------------------
 1.Clone the whole repo into your local device's folder.
 2.run command "npm i" (to install node modules into the project)
-3.run commmand "npm start"
+3.run commmand "npm start/yarn start"
 4.Enjoy !
 
 
