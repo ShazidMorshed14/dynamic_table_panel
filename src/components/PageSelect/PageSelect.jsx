@@ -1,9 +1,13 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "../../commons/common_styles.scss";
+import { setLimit } from "../../features/orders/orderSlice";
 
-const PageSelect = ({ limit, setLimit }) => {
+const PageSelect = ({}) => {
+  const limit = useSelector((state) => state.orders.limit);
+  const dispatch = useDispatch();
   const onSelectChange = (e) => {
-    setLimit(e.target.value);
+    dispatch(setLimit(e.target.value));
   };
   return (
     <div className="page_select_wrapper">

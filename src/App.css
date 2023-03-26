@@ -71,3 +71,21 @@ td {
   height: 100%;
   width: 100%;
 }
+
+.hide_lg {
+  display: none;
+}
+
+.form_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.common_form {
+  width: 500px;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: offwhite;
+}

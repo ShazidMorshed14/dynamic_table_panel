@@ -2,24 +2,24 @@ import React from "react";
 import Table from "react-bootstrap/Table";
 import { formateDate } from "../../commons/utils";
 import "../../commons/common_styles.scss";
+import { useSelector } from "react-redux";
+import Spinner from "../../commons/images/spinner.gif";
 
-const DataTable = ({ orders }) => {
+const DataTable = ({ orders, columns }) => {
+  const loading = useSelector((state) => state.orders.loading);
   return (
     <div className="table_wrapper">
-      <Table width={100} style={{ borderRadius: "8px !important" }}>
-        <thead>
-          <tr>
-            <th>Order ID</th>
-            <th>Quantity</th>
-            <th>Total Price</th>
-            <th>Order Status</th>
-            <th>Payment Status</th>
-            <th>Order Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          {orders.length > 1 &&
-            orders.map((order) => {
+      {!loading ? (
+        <Table width={100} style={{ borderRadius: "8px !important" }}>
+          <thead>
+            <tr>
+              {columns.map((column_name) => {
+                return <th>{column_name}</th>;
+              })}
+            </tr>
+          </thead>
+          <tbody>
+            {orders.map((order) => {
               let formattedDate = formateDate(order.createdAt);
               return (
                 <tr>
@@ -54,10 +54,15 @@ const DataTable = ({ orders }) => {
                 </tr>
               );
             })}
-        </tbody>
-      </Table>
+          </tbody>
+        </Table>
+      ) : (
+        <div className="loading_wrapper">
+          <img src={Spinner} alt="" className="src" />
+        </div>
+      )}
     </div>
   );
 };
 
-export default DataTable;
+export default React.memo(DataTable);

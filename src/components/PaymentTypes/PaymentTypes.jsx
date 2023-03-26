@@ -1,18 +1,20 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "../../commons/common_styles.scss";
+import { setFilterPaymentStatus } from "../../features/orders/orderSlice";
 
-const PaymentTypes = ({
-  paymentTypes,
-  filterPaymentStatus,
-  setFilterPaymentStatus,
-}) => {
+const PaymentTypes = ({ paymentTypes }) => {
+  const dispatch = useDispatch();
+  const filterPaymentStatus = useSelector(
+    (state) => state.orders.filterPaymentStatus
+  );
   const onChange = ({ currentTarget: input }) => {
     if (input.checked) {
       const state = [...filterPaymentStatus, input.value];
-      setFilterPaymentStatus(state);
+      dispatch(setFilterPaymentStatus(state));
     } else {
       const state = filterPaymentStatus.filter((val) => val !== input.value);
-      setFilterPaymentStatus(state);
+      dispatch(setFilterPaymentStatus(state));
     }
   };
 

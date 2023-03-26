@@ -1,4 +1,5 @@
-export const API_URL = "http://localhost:5000/orders";
+//export const API_URL = "http://localhost:5000";
+export const API_URL = "https://dynamic-table-server.onrender.com";
 
 export const formateDate = (gotDate) => {
   const date = new Date(gotDate);

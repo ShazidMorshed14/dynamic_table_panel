@@ -1,18 +1,22 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "../../commons/common_styles.scss";
+import { setFilterOrderStatus } from "../../features/orders/orderSlice";
 
-const OrderTypes = ({
-  orderTypes,
-  filterOrderStatus,
-  setFilterOrderStatus,
-}) => {
+const OrderTypes = ({ orderTypes }) => {
+  const dispatch = useDispatch();
+
+  const filterOrderStatus = useSelector(
+    (state) => state.orders.filterOrderStatus
+  );
+
   const onChange = ({ currentTarget: input }) => {
     if (input.checked) {
       const state = [...filterOrderStatus, input.value];
-      setFilterOrderStatus(state);
+      dispatch(setFilterOrderStatus(state));
     } else {
       const state = filterOrderStatus.filter((val) => val !== input.value);
-      setFilterOrderStatus(state);
+      dispatch(setFilterOrderStatus(state));
     }
   };
 

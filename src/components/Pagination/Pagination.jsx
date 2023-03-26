@@ -1,10 +1,13 @@
+import { useDispatch } from "react-redux";
 import "../../commons/common_styles.scss";
+import { setPage } from "../../features/orders/orderSlice";
 
-const Pagination = ({ page, total, limit, setPage }) => {
+const Pagination = ({ page, total, limit }) => {
+  const dispatch = useDispatch();
   const totalPages = Math.ceil(total / limit);
 
   const onClick = (newPage) => {
-    setPage(newPage + 1);
+    dispatch(setPage(newPage + 1));
   };
 
   return (
