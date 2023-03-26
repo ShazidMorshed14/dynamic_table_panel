@@ -1,0 +1,26 @@
+Installation procedure of the project on local
+-----------------------------------------------
+1.Clone the whole repo into your local device's folder.
+2.run command "npm i" (to install node modules into the project)
+3.run commmand "npm start"
+4.Enjoy !
+
+
+Live link of the Project
+----------------------------------------
+I'have hosted the front-end part of the project in firebase 
+here is the link of deployed project--> https://dynamic-table-700c4.web.app/
+
+the server (Back-end is also hosted) in Render.com here is the API link-> https://dynamic-table-server.onrender.com
+
+Stacks I've used
+----------------------------------------
+I have used modern stacks like 
+# React
+# Node js
+# Express js
+# MongoDB
+# Redux-thunk
+# Sass (for styling)
+
+
